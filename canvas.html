@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style type="text/css">
+			body{
+				background: black;
+				text-align: center;
+			}
+			#d1{
+				background: #fff;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				let oC=document.getElementById('d1');
+				let gd = oC.getContext('2d');
+				gd.moveTo(100,100);
+				gd.lineTo(200,200);
+				gd.strokeStyle='red';
+				gd.stroke();
+				
+				//第二条线
+				gd.beginPath();//清楚之前的路径
+				gd.lineTo(300,100);
+				gd.lineTo(400,200);
+				gd.strokeStyle='yellow';
+				gd.stroke();
+				
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="d1" width="600px" height="400px"></canvas>
+	</body>
+</html>
